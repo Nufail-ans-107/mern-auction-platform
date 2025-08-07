@@ -29,8 +29,10 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -var "ami_id=${{ secrets.AMI_ID }}" -var "instance_type=${{ secrets.INSTANCE_TYPE }}" -var "region=${{ secrets.AWS_REGION }}" -var "key_name=${{ secrets.KEY_NAME }}" -var "my_ip=${{ secrets.MY_IP }}"
 
+
     - name: Terraform Apply
       run: terraform apply -auto-approve -var "ami_id=${{ secrets.AMI_ID }}" -var "instance_type=${{ secrets.INSTANCE_TYPE }}" -var "region=${{ secrets.AWS_REGION }}" -var "key_name=${{ secrets.KEY_NAME }}" -var "my_ip=${{ secrets.MY_IP }}"
+
 
     
     env:
