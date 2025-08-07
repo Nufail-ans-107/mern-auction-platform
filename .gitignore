@@ -10,3 +10,35 @@ config/
 # Optional: Add other files/folders you want to ignore
 *.log
 .DS_Store
+
+# Node.js (if any node code is present)
+node_modules/
+.env
+npm-debug.log*
+
+# Docker
+*.log
+*.pid
+docker-compose.override.yml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+crash.log
+override.tf
+override.tf.json
+*.backup
+
+# System files
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# GitHub Actions runtime files
+.github/*.log
+
+# EC2 Key Pair (if generated locally, NEVER COMMIT it)
+*.pem
