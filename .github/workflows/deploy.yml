@@ -26,7 +26,7 @@ jobs:
       run: terraform validate
       working-directory: terraform
 
-    - name: Terraform Plan
+        - name: Terraform Plan
       run: |
         terraform plan \
           -var "ami_id=${{ secrets.AMI_ID }}" \
@@ -35,7 +35,6 @@ jobs:
           -var "key_name=${{ secrets.EC2_KEY_NAME }}" \
           -var "my_ip=${{ secrets.MY_IP }}"
       working-directory: terraform
-
 
     - name: Terraform Apply
       run: |
@@ -46,6 +45,7 @@ jobs:
           -var "key_name=${{ secrets.EC2_KEY_NAME }}" \
           -var "my_ip=${{ secrets.MY_IP }}"
       working-directory: terraform
+
 
 
     env:
